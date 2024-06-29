@@ -9,30 +9,24 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {// using level order traversal 
+class Solution {
+    public:
+    void dfs(TreeNode* root, int level, vector<int>& res)
+    {
+        if(root==NULL)
+        {
+            return;
+        }
+        if(res.size()==level)
+        res.push_back(root->val);
+        dfs(root->right,level+1,res);
+        dfs(root->left,level+1,res);
+    }
 public:
     vector<int> rightSideView(TreeNode* root) {
-        vector<int> ans;
-        if (!root) return ans; 
+        vector<int>res;
+        dfs(root,0,res);//0 is the level of tree;
+        return res;
 
-        queue<TreeNode*>q;
-        q.push(root);
-        while(!q.empty())
-        {
-            int size=q.size();
-            vector<int>level;
-            for(int i=0;i<size;i++)
-            {
-                TreeNode* node=q.front();
-                q.pop();
-                if(node->left!=NULL)
-                q.push(node->left);
-                if(node->right!=NULL)
-                q.push(node->right);
-                if(i==size-1)
-                ans.push_back(node->val);
-            }
-        }
-        return ans;
     }
 };
