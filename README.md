@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1039-find-the-town-judge](https://github.com/anirudhxchaturvedi/leetcode/tree/master/1039-find-the-town-judge) |
+| [1293-three-consecutive-odds](https://github.com/anirudhxchaturvedi/leetcode/tree/master/1293-three-consecutive-odds) |
 ## Hash Table
 |  |
 | ------- |
