@@ -10,7 +10,7 @@ public:
             return true;
         }
         for(int i=3;i<arr.size();i++){
-            window+=(arr[i]%2)-(arr[i-3]%2);
+            window=window + (arr[i]%2) - (arr[i-3]%2);
             if(window==3){
                 return true;
             }
