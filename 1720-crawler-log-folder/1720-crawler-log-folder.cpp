@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minOperations(vector<string>& logs) {
-        int count=0; string s="";
+        int count=0;
         for(auto i : logs){
             if (i=="../")
             {
@@ -9,7 +9,7 @@ public:
                 count--;
             }
             else if(i=="./")
-            s="kuch nhi karna";
+            continue;
             else{
             count++;
             }
